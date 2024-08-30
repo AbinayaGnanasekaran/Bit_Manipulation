@@ -1,0 +1,78 @@
+// To find power of 2
+int a;
+cin>>a;
+bool ans=(a>0 && (a&(a-1))==0);
+cout<<ans;   //1 - power of 2  0-not power of 2
+
+// a . how many set bits are there
+int n;
+int c=0;
+cin>>n;
+while(n){
+   c++;
+   n=n&(n-1);
+}
+cout<<c;
+
+// check if ith bit is set or not
+int n;
+int i;
+cin>>n>>i;
+if((1<<i) & n){
+cout<<"set";
+return 0;
+}
+cout<<"unset";
+
+//c .set the ith bit
+int n;
+int i;
+cin>>n>>i;
+n=n | (1<<i);
+cout<<n;
+
+//d . unset the ith bit
+int n;
+int i;
+cin>>n>>i;
+n=n & ~(1<<i);  //to make it zero at that position
+cout<<n;
+
+
+
+
+//f. swapping 2 numbers
+int a;
+int b;
+cin>>a>>b;
+a=a^b;
+b=b^a;
+a=a^b;
+cout<<a<<b;
+
+//odd or even
+int n;
+cin>>n;
+if(n&1){
+cout<<"odd";
+}
+else{
+cout<<"even";
+
+//Upper to lower case 
+ char c;
+cin >> c;
+c = c | (1 << 5);
+cout << c ;
+//lower case to upper 
+ char c;
+cin >> c;
+c = c & ~(1 << 5);
+cout << c << endl;
+
+//toggle 
+ int c,i;
+  cin >> c>>i;
+ c = c ^ (1 << i);
+cout << c << endl;
+ return 0;
